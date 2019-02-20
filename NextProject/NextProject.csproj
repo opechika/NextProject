@@ -78,6 +78,8 @@
     <Compile Include="Helper\BaseClass.cs" />
     <Compile Include="Hooks\NextHooks.cs" />
     <Compile Include="Pages\NextHomePage.cs" />
+    <Compile Include="Pages\RegistrationPage.cs" />
+    <Compile Include="Pages\SignInPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\NextRegistrationSteps.cs" />
   </ItemGroup>

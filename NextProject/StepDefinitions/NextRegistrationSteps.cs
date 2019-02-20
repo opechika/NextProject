@@ -12,6 +12,9 @@ namespace NextProject.StepDefinitions
     public sealed class NextRegistrationSteps :BaseClass
     {   
         NextHomePage nextHomePage = new NextHomePage(); 
+        SignInPage signInPage  = new SignInPage();
+        private RegistrationPage registrationPage = new RegistrationPage();
+
 
         [Given(@"I am on Next Homepage")]
         public void GivenIAmNextHomepage()
@@ -22,31 +25,32 @@ namespace NextProject.StepDefinitions
         [Given(@"I click on my account tab link")]
         public void GivenIClickOnMyAccountTabLink()
         {
-           nextHomePage.ClickOnMyAccountLink(); 
+           signInPage = nextHomePage.ClickOnMyAccountLink(); 
+           
         }
 
         [Given(@"Create a Next account page is displayed")]
         public void GivenCreateANextAccountPageIsDisplayed()
         {
-            
+            signInPage.IsSignPageDisplayed();
         }
 
         [Given(@"I click the continue button")]
         public void GivenIClickTheContinueButton()
         {
-            
+           registrationPage = signInPage.ClickOnContinueButton();
         }
 
         [When(@"I select title as ""(.*)""")]
-        public void WhenISelectTitleAs(string p0)
+        public void WhenISelectTitleAs(string title)
         {
-            
+          registrationPage.SelectTitle(title);  
         }
 
         [When(@"I enter first name as ""(.*)""")]
-        public void WhenIEnterFirstNameAs(string p0)
+        public void WhenIEnterFirstNameAs(string name)
         {
-            
+          registrationPage.EnterFirstName(name);  
         }
 
         [When(@"I enter last name as ""(.*)""")]

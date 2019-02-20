@@ -22,12 +22,14 @@ namespace NextProject.Pages
             Assert.True(logo.Displayed);
         }
 
-        public void ClickOnMyAccountLink()
+        public SignInPage ClickOnMyAccountLink()
         {
             Thread.Sleep(5000);
             accountLink = GetElementByCssSelector("[data-link-id='DataLinkId']");
             accountLink.Click();
+            return new SignInPage();
         }
+        
     }
 
 }
