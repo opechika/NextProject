@@ -21,7 +21,7 @@ namespace NextProject.Hooks
         [AfterScenario]
         public void AfterScenario()
         {
-         CloseBrowser();   
+            CloseBrowser();   
         }
     }
 }

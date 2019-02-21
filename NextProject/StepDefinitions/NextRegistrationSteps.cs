@@ -14,6 +14,8 @@ namespace NextProject.StepDefinitions
         NextHomePage nextHomePage = new NextHomePage(); 
         SignInPage signInPage  = new SignInPage();
         private RegistrationPage registrationPage = new RegistrationPage();
+        MyAcoountPage myAcoountPage = new MyAcoountPage();
+       
 
 
         [Given(@"I am on Next Homepage")]
@@ -54,57 +56,58 @@ namespace NextProject.StepDefinitions
         }
 
         [When(@"I enter last name as ""(.*)""")]
-        public void WhenIEnterLastNameAs(string p0)
+        public void WhenIEnterLastNameAs(string lname)
         {
-           
+           registrationPage.EnterLastName(lname);
         }
 
         [When(@"I enter email as ""(.*)""")]
-        public void WhenIEnterEmailAs(string p0)
+        public void WhenIEnterEmailAs(string email)
         {
-            
+            registrationPage.EnterEmail(email);
         }
 
         [When(@"I enter password as ""(.*)""")]
-        public void WhenIEnterPasswordAs(string p0)
+        public void WhenIEnterPasswordAs(string paWord)
         {
-           
+           registrationPage.EnterPassword(paWord);
         }
 
         [When(@"I enter date of birth as ""(.*)""")]
-        public void WhenIEnterDateOfBirthAs(string p0)
+        public void WhenIEnterDateOfBirthAs(string dBirth)
         {
-            
+            registrationPage.EnterDateOfBirth(dBirth);
         }
 
         [When(@"I enter contact telephone number as ""(.*)""")]
-        public void WhenIEnterContactTelephoneNumberAs(Decimal p0)
+        public void WhenIEnterContactTelephoneNumberAs(string number)
         {
-            
+           registrationPage.EnterContactTelephone(number); 
         }
 
         [When(@"I enter house no as ""(.*)""")]
-        public void WhenIEnterHouseNoAs(int p0)
+        public void WhenIEnterHouseNoAs(string houseNumber)
         {
-           
+         registrationPage.EnterHouseNumber(houseNumber);  
         }
 
         [When(@"I search for ""(.*)"" as postcode")]
-        public void WhenISearchForAsPostcode(string p0)
+        public void WhenISearchForAsPostcode(string pcode)
         {
-           
+          registrationPage.EnterPostCode(pcode); 
+         // registrationPage.SearchForPostCode();
         }
 
         [When(@"click on ""(.*)"" for next directory")]
-        public void WhenClickOnForNextDirectory(string p0)
+        public void WhenClickOnForNextDirectory(string decision)
         {
-            
+          registrationPage.ClickForNextDirectory(decision);  
         }
 
         [When(@"I click on register my account button")]
         public void WhenIClickOnRegisterMyAccountButton()
         {
-           
+            myAcoountPage = registrationPage.ClickOnRegistrationButton();
         }
 
         [Then(@"my Next account is created")]

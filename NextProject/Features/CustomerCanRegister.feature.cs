@@ -72,7 +72,7 @@ namespace NextProject.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Customer can create a Next Account")]
-        [NUnit.Framework.TestCaseAttribute("Mrs", "Michelle", "Saint", "MSaint@mailinator.com", "passWord", "01/01/78", "07787654321", "21", "M40ODW", "No", null)]
+        [NUnit.Framework.TestCaseAttribute("Mrs", "Michelle", "Saint", "MSaint@mailinator.com", "passWord1", "01/01/78", "07787654321", "21", "M400DW", "No", null)]
         [NUnit.Framework.TestCaseAttribute("Mr", "Smith", "William", "smith.william@mailinator.com", "Pa55word", "02/02/88", "07712345678", "12", "ol98le", "Yes", null)]
         public virtual void CustomerCanCreateANextAccount(string title, string fName, string sName, string email, string password, string dOB, string tphone, string hNo, string pCode, string directory, string[] exampleTags)
         {
@@ -89,25 +89,25 @@ this.ScenarioInitialize(scenarioInfo);
 #line 10
  testRunner.And("I click the continue button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
- testRunner.When("I select title as \"Mr\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I select title as \"{0}\"", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 12
- testRunner.And("I enter first name as \"Smith\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I enter first name as \"{0}\"", fName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
- testRunner.And("I enter last name as \"William\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I enter last name as \"{0}\"", sName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
- testRunner.And("I enter email as \"smith.william@mailinator.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I enter email as \"{0}\"", email), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
- testRunner.And("I enter password as \"Pa55word\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I enter password as \"{0}\"", password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
- testRunner.And("I enter date of birth as \"02/02/88\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I enter date of birth as \"{0}\"", dOB), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
- testRunner.And("I enter contact telephone number as \"07712345678\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I enter contact telephone number as \"{0}\"", tphone), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 18
- testRunner.And("I enter house no as \"12\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I enter house no as \"{0}\"", hNo), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 19
- testRunner.And("I search for \"OL98LE\" as postcode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I search for \"{0}\" as postcode", pCode), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 20
- testRunner.And("click on \"Yes\" for next directory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("click on \"{0}\" for next directory", directory), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 21
  testRunner.And("I click on register my account button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 22

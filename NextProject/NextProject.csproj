@@ -77,6 +77,7 @@
     </Compile>
     <Compile Include="Helper\BaseClass.cs" />
     <Compile Include="Hooks\NextHooks.cs" />
+    <Compile Include="Pages\MyAcoountPage.cs" />
     <Compile Include="Pages\NextHomePage.cs" />
     <Compile Include="Pages\RegistrationPage.cs" />
     <Compile Include="Pages\SignInPage.cs" />
